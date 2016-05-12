@@ -1,6 +1,6 @@
 {
   "name": "electron-terminal-open",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Open App from Command Line Interface for Electron App.",
   "license": "MIT",
   "repository": "akameco/electron-terminal-open",
