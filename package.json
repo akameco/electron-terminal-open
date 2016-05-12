@@ -1,0 +1,35 @@
+{
+  "name": "electron-terminal-open",
+  "version": "0.0.0",
+  "description": "Open App from Command Line Interface for Electron App.",
+  "license": "MIT",
+  "repository": "akameco/electron-terminal-open",
+  "author": {
+    "name": "akameco",
+    "email": "akameco.t@gmail.com",
+    "url": "akameco.github.io"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "electron"
+  ],
+  "dependencies": {
+    "co": "^4.6.0",
+    "command-installer": "^0.2.2",
+    "ejs": "^2.4.1",
+    "pify": "^2.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "electron-prebuilt": "^1.0.1",
+    "xo": "^0.15.0"
+  }
+}
