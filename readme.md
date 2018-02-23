@@ -1,5 +1,7 @@
 # electron-terminal-open [![Build Status](https://travis-ci.org/akameco/electron-terminal-open.svg?branch=master)](https://travis-ci.org/akameco/electron-terminal-open)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/electron-terminal-open.svg)](https://greenkeeper.io/)
+
 > Open App from Command Line Interface for Electron.
 
 
