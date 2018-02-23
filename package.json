@@ -26,11 +26,11 @@
     "co": "^4.6.0",
     "command-installer": "^0.2.2",
     "ejs": "^2.4.1",
-    "pify": "^2.3.0"
+    "pify": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "^0.25.0",
     "electron-prebuilt": "^1.0.1",
-    "xo": "^0.15.0"
+    "xo": "^0.20.3"
   }
 }
