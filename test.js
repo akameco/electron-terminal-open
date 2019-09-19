@@ -1,6 +1,6 @@
-import test from 'ava';
-import fn from './';
+import test from 'ava'
+import fn from './'
 
 test('todo', t => {
-	t.is(typeof fn, 'function');
-});
+  t.is(typeof fn, 'function')
+})
