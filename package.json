@@ -7,13 +7,13 @@
   "author": {
     "name": "akameco",
     "email": "akameco.t@gmail.com",
-    "url": "akameco.github.io"
+    "url": "https://akameco.github.io"
   },
   "engines": {
     "node": ">=8"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "ava"
   },
   "files": [
     "index.js",
@@ -23,7 +23,6 @@
     "electron"
   ],
   "dependencies": {
-    "co": "^4.6.0",
     "command-installer": "^0.2.2",
     "ejs": "^2.4.1",
     "pify": "^4.0.1"
