@@ -1,55 +1,57 @@
-'use strict';
-const {BrowserWindow, app} = require('electron');
-const parseArgs = require('minimist');
-const electronTerminalOpen = require('electron-terminal-open');
+'use strict'
+const { BrowserWindow, app } = require('electron')
+const parseArgs = require('minimist')
+const electronTerminalOpen = require('electron-terminal-open')
 
-let mainWindow;
+let mainWindow
 
 function createMainWindow() {
-	const win = new BrowserWindow({
-		title: 'sample-app',
-		width: 400,
-		height: 500
-	});
+  const win = new BrowserWindow({
+    title: 'sample-app',
+    width: 400,
+    height: 500,
+  })
 
-	if (process.env.NODE_ENV === 'development') {
-		win.openDevTools();
-	}
+  if (process.env.NODE_ENV === 'development') {
+    win.openDevTools()
+  }
 
-	win.loadURL(`https://kangax.github.io/compat-table/es6/`);
-	win.on('closed', () => {
-		mainWindow = null;
-	});
+  win.loadURL(`https://kangax.github.io/compat-table/es6/`)
+  win.on('closed', () => {
+    mainWindow = null
+  })
 
-	return win;
+  return win
 }
 
-const args = parseArgs(process.argv.slice(1));
+const args = parseArgs(process.argv.slice(1))
 
 if (args.h || args.help) {
-	console.log(`help sample`);
-	process.exit(0); // eslint-disable-line
+  console.log(`help sample`)
+  process.exit(0) // eslint-disable-line
 }
 
 if (args.v || args.version) {
-	console.log(app.getName(), app.getVersion());
-	process.exit(0); // eslint-disable-line
+  console.log(app.getName(), app.getVersion())
+  process.exit(0) // eslint-disable-line
 }
 
 app.on('ready', () => {
-	electronTerminalOpen(app).then(() => {
-		mainWindow = createMainWindow();
-	}).catch(err => {
-		console.log(err);
-	});
-});
+  electronTerminalOpen(app)
+    .then(() => {
+      mainWindow = createMainWindow()
+    })
+    .catch(err => {
+      console.log(err)
+    })
+})
 
 app.on('activate', () => {
-	mainWindow.show();
-});
+  mainWindow.show()
+})
 
 app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
-});
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
